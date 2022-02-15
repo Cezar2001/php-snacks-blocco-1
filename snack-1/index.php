@@ -1,7 +1,6 @@
 <?php
 
 $matches = [
-
     [
         "teamA" => "Boston Celtics",
         "scoreA" => "51",
