@@ -1,20 +1,16 @@
 <?php
 
-$numbers = [];
 $arrayNumbers = [];
+$numCreated = 15;
 
-for($i = 0; $i < 50; $i++) {
-    $randomNumbers = rand(1, 50);
-    if(!in_array($randomNumbers, $arrayNumbers, true)) {
+for($i = 0; $i < $numCreated; $i++) {
+    $randomNumbers = rand(1, 100);
+    if(!in_array($randomNumbers, $arrayNumbers)) {
         $arrayNumbers[] = $randomNumbers;
-    } 
-}
-
-for($i = 0; $i < 15; $i++) {
-    if(!in_array($arrayNumbers[$i], $numbers, true)) {
-        $numbers[] = $arrayNumbers[$i];
+    } else {
+        $i--;
     }
 }
 
-var_dump($numbers)
+var_dump($arrayNumbers);
 ?>
